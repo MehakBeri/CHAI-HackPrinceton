@@ -1,0 +1,89 @@
+doctype html
+html(lang='en')
+  head
+    title CHAI
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+    style.
+      body  {
+      background-image: url("https://cdn.geekwire.com/wp-content/uploads/2018/01/bigstock-Artificial-Intelligence-Brain-207462289-630x450.jpg");
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: 1500px 1000px;
+      padding-top:40px;
+      }
+      .jumbotron {
+      text-align:center;
+      opacity:0.7;
+      padding-top:90px;
+      padding-bottom:90px;
+      }
+      .btn{
+      opacity:1;
+      background-color:black;
+      color:white;      
+      }
+      #grade{
+      color:white;
+      padding-top:100px;
+      }
+  body(style='height:1500px')
+    nav.navbar.navbar-inverse.navbar-fixed-top
+      .container-fluid
+        .navbar-header
+          a.navbar-brand(href='#') CHAI
+        ul.nav.navbar-nav
+          li.active
+            a(href='#') Home
+          li
+            a(href='#grade') Chai-Grade
+          li
+            a(href='#') Block-Grade
+          li
+            a(href='#') How it Works?
+    .container(style='margin-top:50px')
+      .jumbotron
+        h1 Critique Handling Artificial Intelligence (C.H.A.I.)
+        h2 Machine Learning and Natural Language Powered Automatic Essay Grader 
+        blockquote
+            h3
+                |" C.H.A.I takes as much time to grade papers as you would take to drink a hot cup of chai-tea! "
+            footer Mehak Beri
+        button.btn.btn-secondary.btn-lg.btn-block(type='button') Grade Essays!
+      br
+      br
+      br
+      br
+      .row#grade
+        h2 GRADE ESSAYS
+        button.btn.btn-light.btn-lg(type='button',data-toggle='modal', data-target='#myModal') Upload File
+        br
+        br
+        br
+        h2 BLOCKCHAIN POWERED GRADING
+        button.btn.btn-light.btn-lg(type='button',data-toggle='modal', data-target='#myModal') Set Reward
+      br
+      br
+      br
+      br
+      .row#how
+        h2 HOW IT WORKS
+      
+      // Modal
+      #myModal.modal.fade(role='dialog')
+       .modal-dialog
+        // Modal content
+        .modal-content
+          .modal-header
+            button.close(type='button', data-dismiss='modal') ×
+            h4.modal-title Modal Header
+          .modal-body
+            p Some text in the modal.
+          .modal-footer
+            button.btn.btn-default(type='button', data-dismiss='modal') Close  
+
+
+        

@@ -11,7 +11,7 @@ def getData(address):
     data = []
     for sheet_name in sheets:
         sh = workbook.sheet_by_name(sheet_name)
-        for rownum in range(5): #sh.nrows
+        for rownum in range(sh.nrows): #sh.nrows
             row_vals = sh.row_values(rownum)
             temp=[]
             temp.append(row_vals[0])
@@ -84,9 +84,14 @@ def getFeatures(address,theme):
     data4 = similarity(data3, theme)
     return data4
 
+def getBagOfWords(address):
+    d = getData(address)
+    data2 = BagOfWords(d)
+    return data2
+
 if __name__=="__main__":
     print("========================================================================")
-    trainingData="G:/hackPrinceton/data/chai/training/7.xlsx"
+    trainingData="G:/hackPrinceton/CHAI/data/chai/training/7.xlsx"
     #GRADING CRITERIA:
     # >90: A; 80-89:A- ; 70-79:B; 60-69:B- ; 50-59:C; 40-49:C- ; <30: F
     # test Data has essay id, essay set, essay, score. need to add the following features to each data tuple:
@@ -105,7 +110,7 @@ if __name__=="__main__":
     # similarity measure - similarity between prompt words and essay non-stop words-using princeton's wordnet
     #For dataset 7- the theme is "patience"
     data4=similarity(data3,"Laughter is the shortest distance between two people")
-    print(data4[0])
+    # print(data4[0])
 
 # DATA AT THIS TIME HAS THE FOLLOWING PARAMETERS:
 # 0: essay id
@@ -114,9 +119,10 @@ if __name__=="__main__":
 # 3: score
 # 4: number of words
 # 5: semantic coherence %age
-# 6: n-gram
+# 6: n-gram (bag of words)
 # 7: grammar check parameter
 # 8: similarity index
+
 
 
 
