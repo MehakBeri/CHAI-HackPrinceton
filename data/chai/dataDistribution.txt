@@ -1,0 +1,4 @@
+full=100%
+test=60%
+train=20%
+validate=20%
